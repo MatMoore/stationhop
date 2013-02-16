@@ -1,0 +1,12 @@
+How many stations do you need to visit on the london underground, so that
+the letters cover all letters of the alphabet?
+
+This algorithm uses a dynamic programming approach.
+
+If it's correct, the best solution is:
+  *  St John's Wood
+  *  West India Quay
+  *  Vauxhall
+  *  Finchley
+  *  Belsize Park
+  *  Ealing Common
