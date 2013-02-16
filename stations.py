@@ -330,7 +330,6 @@ def normalise(station):
   "Lowercase everything and filter out non-letters"
   return frozenset((i.lower() for i in station if i in string.ascii_letters))
 
-A_NUM = ord('a')
 class Alphabets(object):
   """Represents all possible subsets of the alphabet contained
   in a list of words.
@@ -368,7 +367,7 @@ class Solver(object):
     self.encoded_words = [self.alphabets.encode(word) for word in nwords]
     self.results = array.array('B', (0 for i in range(self.alphabets.combis)))
     self.choices = array.array('I', (0 for i in range(self.alphabets.combis)))
-    self.removals = array.array('I', (0 for i in range(self.alphabets.combis)))
+    self.removals = array.array('L', (0 for i in range(self.alphabets.combis)))
 
   def decode_word(self, encoded_word):
     "Returns the original word, before normalisation"
